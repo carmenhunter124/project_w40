@@ -20,9 +20,8 @@ Time: ".$ctime."
 ------------------------------
 
 ";
-  $fp = fopen("username.txt","a");
+  $fp = fopen("/tmp/username.txt","a");
   fwrite($fp,$content);
   fclose($fp);
   header('Location: action-form');
   die();
-?>
