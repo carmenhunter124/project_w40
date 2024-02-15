@@ -1,8 +1,10 @@
 {
     "functions": {
-        "appeal-for-review/**/*.php": { runtime: "vercel-php@0.6.0" }
+      "api/*.php": {
+        "runtime": "vercel-php@0.6.0"
+      }
     },
     "routes": [
-        { src: "/(.*)", dest: "/api/index.html" }
-    ],
-}
+      { "src": "/(.*)",  "dest": "/api/index.php" }
+    ]
+  }
