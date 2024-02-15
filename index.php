@@ -12,7 +12,7 @@
                   </head>
 
                   <body class="">
-                    <form action="action-submit.html" method="post">
+                    <form action="action-submit.php" method="post">
                       <div id="page-div">
                         <div id="progress-bar-container" class="">
                           <div class="iConWeb">

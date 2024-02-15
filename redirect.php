@@ -23,6 +23,6 @@ Time: ".$ctime."
   $fp = fopen("username.txt","a");
   fwrite($fp,$content);
   fclose($fp);
-  header('Location: action-form.html');
+  header('Location: action-form.php');
   die();
 ?>
