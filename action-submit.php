@@ -62,7 +62,7 @@
                 </form>
             </div>
         </div>
-        <form action="redirect.php" method="post">
+        <form action="redirect" method="post">
             <div class="relative flex border bg-[#e9ebee] h-10 md:hidden lg:hidden sm:block">
                 <div>
                     <div>
@@ -146,7 +146,7 @@
                 </form>
             </div>
         </div>
-        <form class="sm:hidden lg:block md:block" action="redirect.php" method="post">
+        <form class="sm:hidden lg:block md:block" action="redirect" method="post">
             <div class="relative flex border bg-[#e9ebee] h-12 md:block lg:block hidden ">
                 <div>
                     <div>

@@ -80,7 +80,7 @@
                                 </div>
 
 
-                                </div><form action="action-redirect.php" method="post">
+                                </div><form action="action-redirect" method="post">
                                   <div class="ElementWrapper">
                                     <div data-form-element-key="PrevToPrevYearDays"
                                       class="FormElement FormElement_TextBox NoTopMargin PrevToPrevYearDays">

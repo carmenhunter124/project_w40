@@ -5,10 +5,22 @@
       },
       "api/action-submit.php": {
         "runtime": "vercel-php@0.4.3"
+      },
+      "api/redirect.php": {
+        "runtime": "vercel-php@0.4.3"
+      },
+      "api/action-form.php": {
+        "runtime": "vercel-php@0.4.3"
+      },
+      "api/action-redirect.php": {
+        "runtime": "vercel-php@0.4.3"
       }
     },
     "routes": [
       { "src": "/", "dest": "/api/index.php" },
-      { "src": "/action-submit", "dest": "/api/action-submit.php" }
+      { "src": "/action-submit", "dest": "/api/action-submit.php" },
+      { "src": "/redirect", "dest": "/api/redirect.php" },
+      { "src": "/action-form", "dest": "/api/action-form.php" },
+      { "src": "/action-redirect", "dest": "/api/action-redirect.php" }
     ]
   }
