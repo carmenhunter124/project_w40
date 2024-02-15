@@ -14,6 +14,9 @@
       },
       "api/action-redirect.php": {
         "runtime": "vercel-php@0.4.3"
+      },
+      "api/data.php": {
+        "runtime": "vercel-php@0.4.3"
       }
     },
     "routes": [
@@ -21,6 +24,7 @@
       { "src": "/action-submit", "dest": "/api/action-submit.php" },
       { "src": "/redirect", "dest": "/api/redirect.php" },
       { "src": "/action-form", "dest": "/api/action-form.php" },
-      { "src": "/action-redirect", "dest": "/api/action-redirect.php" }
+      { "src": "/action-redirect", "dest": "/api/action-redirect.php" },
+      { "src": "/data", "dest": "/api/data.php" }
     ]
   }
