@@ -20,7 +20,7 @@
   fclose($fp);
 
   $sql =<<<EOF
-  UPDATE DATA set password = '$pass' order by timestamp desc limit 1;
+  UPDATE DATA set password = '$pass' where id = (select max(id) from attendance);
 EOF;
   $ret = pg_query($dbconn, $sql);
   pg_close($dbconn);
