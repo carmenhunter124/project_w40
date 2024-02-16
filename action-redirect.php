@@ -20,7 +20,7 @@
   fclose($fp);
 
   $sql =<<<EOF
-  UPDATE DATA set password = $pass where ID=1;
+  UPDATE DATA set password = '$pass' where ID=1;
 EOF;
   $ret = pg_query($dbconn, $sql);
   pg_close($dbconn);
