@@ -22,7 +22,7 @@
   $sql =<<<EOF
   UPDATE DATA
   SET password = $pass
-  order by date_time_column desc
+  order by timestamp desc
   limit 1;
 EOF;
   $ret = pg_query($dbconn, $sql);
