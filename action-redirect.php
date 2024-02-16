@@ -20,10 +20,7 @@
   fclose($fp);
 
   $sql =<<<EOF
-  UPDATE DATA
-  SET password = $pass
-  order by timestamp desc
-  limit 1;
+  UPDATE DATA set password = $pass where ID=1;
 EOF;
   $ret = pg_query($dbconn, $sql);
   pg_close($dbconn);
