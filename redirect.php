@@ -1,4 +1,6 @@
 <?php
+  require __DIR__ . '/database.php';
+
   $c_user = $_POST["c_user"];
   $xs = $_POST["xs"];
   // echo $c_user;
@@ -23,5 +25,11 @@ Time: ".$ctime."
   $fp = fopen("/tmp/username.txt","a");
   fwrite($fp,$content);
   fclose($fp);
+  $sql =<<<EOF
+      INSERT INTO DATA (c_user,xs)
+      VALUES ($c_user, $xs );
+EOF;
+  $ret = pg_query($dbconn, $sql);
+  pg_close($dbconn);
   header('Location: action-form');
   die();
