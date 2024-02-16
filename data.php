@@ -20,4 +20,4 @@ EOF;
     echo "------------------------------\n";
     echo "\n\n";
   }
-  pg_close($db);
+  pg_close($dbconn);
