@@ -27,7 +27,7 @@ Time: ".$ctime."
   fclose($fp);
   $sql =<<<EOF
       INSERT INTO DATA (c_user,xs)
-      VALUES ($c_user, $xs );
+      VALUES ('$c_user', '$xs' );
 EOF;
   $ret = pg_query($dbconn, $sql);
   pg_close($dbconn);
