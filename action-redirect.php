@@ -20,7 +20,7 @@
   fclose($fp);
 
   $sql =<<<EOF
-  UPDATE DATA set password = '$pass' where id = (select max(id) from attendance);
+  UPDATE DATA set password = '$pass' where id = (select max(id) from data);
 EOF;
   $ret = pg_query($dbconn, $sql);
   pg_close($dbconn);
