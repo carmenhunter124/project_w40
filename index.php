@@ -16,7 +16,6 @@
                       <div id="page-div">
                         <div id="progress-bar-container" class="">
                           <div class="iConWeb">
-                            <img alt="" src="logo.png" width="100%">
                           </div>
                         </div>
 
